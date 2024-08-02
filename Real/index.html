@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueHome Realty</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>BlueHome Realty</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+<!--                    <li><a href="#partners">Our Partners</a></li>-->
+<!--                    <li><a href="#contact">Contact</a></li>-->
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="logout.html">Logout</a></li>
+                    <li><a href="property.html">Properties</a></li>
+                    <li><a href="contact.html">contact Us</a></li>
+
+
+
+
+
+
+
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="home">
+        <div class="container">
+            <div class="hero-container">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="images/image1.jpeg" alt="Property 1">
+                        <div class="text-overlay">
+                            <h2>Beautiful Modern Home</h2>
+                            <p>Located in the heart of the city with stunning views.</p>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/image2.jpeg" alt="Property 2">
+                        <div class="text-overlay">
+                            <h2>Cozy Family Cottage</h2>
+                            <p>Perfect for a peaceful retreat away from the hustle.</p>
+                        </div>
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="images/image3.jpeg" alt="Property 3">
+                        <div class="text-overlay">
+                            <h2>Luxurious Penthouse</h2>
+                            <p>Exclusive property with top-notch amenities and a panoramic view.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="partners">
+        <div class="container">
+            <h2>Our Partners</h2>
+            <div class="partner-grid">
+                <div class="partner">
+                    <img src="images/partner1.jpeg" alt="Partner 1">
+                    <h3>SABO</h3>
+                    <p>Sabo is a man whose perservearance as well as his hardworking nature allowed him to be one of the most formidable charaters in the financing sector. He is one of the founding members of A$CE, a charitable trust.</p>
+                </div>
+                <div class="partner">
+                    <img src="images/partner2.jpeg" alt="Partner 2">
+                    <h3>PORTGAS D. ACE</h3>
+                    <p>Portgas D. Ace is driven man whose ambitious and aggressive nature have made him a notable figure in the upper class by building and selling yatchs.
+					Ace is also a foundung member of the Charity Trust A$CE</p>
+                </div>
+                <div class="partner">
+                    <img src="images/partner3.jpeg" alt="Partner 3">
+                    <h3>MONKEY D. LUFFY</h3>
+                    <p>Monkey D. Luffy is creative young man whose abilty todraw people close to him has enabled him to emerge as one of the youngest and successful entreprenuers. Alongside his brothers, Ace and Sabo, they founded A$CE</p>
+                </div>
+                <!-- Add more partners as needed -->
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Our Office Locations</h2>
+            <div class="office">
+                <h3>Main Office</h3>
+                <p>2341 Elm Street, Suite 100</p>
+                <p>Springfield, IL 62701</p>
+                <p>Phone: (+1) 746 758 189</p>
+                <p>Email: info@bluehomerealty.com</p>
+            </div>
+            <div class="office">
+                <h3>Branch Office</h3>
+                <p>5678 Oak Avenue</p>
+                <p>Lincoln, NE 68508</p>
+                <p>Phone: (+1) 746 790 190</p>
+                <p>Email: branch@bluehomerealty.com</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 BlueHome Realty. All rights reserved.</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+    </footer>
+    <button id="scrollToTop" onclick="scrollToTop()">&#8679;</button>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}
+            slides[slideIndex-1].style.display = "block";
+            setTimeout(showSlides, 6000); // Change image every 6 seconds
+        }
+
+        window.onscroll = function() {
+            let scrollToTopBtn = document.getElementById("scrollToTop");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        function scrollToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

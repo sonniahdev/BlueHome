@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | BlueHome Realty</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #003366; /* Darker blue background */
+            font-family: 'Arial', sans-serif;
+        }
+
+        .login-container {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden; /* Ensure no overflow of animation effects */
+        }
+
+        .login-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #003366, #0066cc);
+            border-radius: 10px;
+            z-index: -1;
+            filter: blur(10px);
+            transform: scale(1.1);
+            opacity: 0.6;
+            animation: gradientAnimation 10s infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 100% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+
+        .login-container h2 {
+            margin: 0 0 20px;
+            font-size: 2em;
+            color: #003366; /* Darker blue */
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-form input {
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 1em;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            background: #f0f2f5;
+            border: 1px solid #ddd;
+            /* Disable browser autofill */
+            -webkit-text-fill-color: #333;
+        }
+
+        .login-form input[type="text"]:focus,
+        .login-form input[type="password"]:focus {
+            border-color: #003366;
+            box-shadow: 0 0 5px rgba(0, 51, 102, 0.5);
+            animation: inputFocus 0.5s ease;
+        }
+
+        @keyframes inputFocus {
+            from { transform: scale(1); }
+            to { transform: scale(1.02); }
+        }
+
+        .login-form button {
+            background: #003366;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .login-form button::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease;
+            z-index: 0;
+        }
+
+        .login-form button:hover::after {
+            left: 0;
+        }
+
+        .login-form button:hover {
+            background: #0066cc;
+        }
+
+        .login-form a {
+            color: #003366;
+            text-decoration: none;
+            font-size: 0.9em;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .login-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login to BlueHome Realty</h2>
+        <form class="login-form" id="loginForm" autocomplete="off">
+            <input type="text" id="username" placeholder="Username" required autocomplete="new-username">
+            <input type="password" id="password" placeholder="Password" required autocomplete="new-password">
+            <button type="submit">Login</button>
+            <a href="#">Forgot Password?</a>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Redirect to home page on successful login
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

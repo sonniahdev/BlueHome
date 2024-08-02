@@ -1,0 +1,243 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5; /* Light background for contrast */
+    color: #333;
+}
+
+header {
+    background: #003366; /* Darker blue */
+    color: #ffffff;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffffff; /* Accent line */
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+#home {
+    background: #003366; /* Darker blue background for hero section */
+    color: #ffffff;
+    text-align: center;
+    padding: 0; /* Remove padding to avoid space between header and slideshow */
+    margin-top: 0; /* Remove margin to ensure it aligns with the header */
+    position: relative;
+}
+
+.hero-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-top: 80px; /* To ensure the hero section is below the fixed header */
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: #004080; /* Slightly different blue for the slideshow container */
+}
+
+.mySlides {
+    display: none;
+    position: relative;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.text-overlay h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.text-overlay p {
+    font-size: 1.2em;
+    margin: 10px 0 0;
+}
+
+.fade {
+    animation: fade 6s infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+#partners {
+    padding: 60px 20px;
+    background: #ffffff; /* Clean white background for partners section */
+}
+
+#partners h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #003366; /* Darker blue */
+}
+
+.partner-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.partner {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    width: 30%;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+}
+
+.partner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.partner img {
+    width: 100%;
+    height: auto;
+}
+
+.partner h3 {
+    font-size: 1.8em;
+    color: #003366; /* Darker blue */
+}
+
+.partner p {
+    font-size: 1em;
+    color: #555;
+}
+
+#contact {
+    padding: 60px 20px;
+    background: #e9ecef; /* Light grey background for contact section */
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #003366; /* Darker blue */
+}
+
+.office {
+    margin-bottom: 30px;
+}
+
+.office h3 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.office p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+footer {
+    background: #000000; /* Black */
+    color: #ffffff;
+    text-align: center;
+    padding: 60px 20px;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+#scrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #003366; /* Darker blue for the scroll button */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}

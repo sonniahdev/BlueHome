@@ -1,0 +1,43 @@
+/* style.css */
+
+/* General Page Background */
+body {
+    background-color: #f0f8ff; /* Light blue background for the whole page */
+}
+
+/* Navbar */
+.fh5co-nav {
+    background-color: #003366; /* Dark blue for the navbar */
+}
+.fh5co-nav a {
+    color: #ffffff; /* White text for links in the navbar */
+}
+
+/* Hero Section */
+#fh5co-hero {
+    background-color: #004080; /* Deep blue for the hero section background */
+}
+#fh5co-hero h1,
+#fh5co-hero h2 {
+    color: #ffffff; /* White text color for heading */
+}
+
+/* Contact Form */
+#fh5co-contact {
+    background-color: #e6f2ff; /* Light blue for the contact section background */
+}
+.form-control {
+    border-color: #003366; /* Dark blue border for form inputs */
+}
+.btn-primary {
+    background-color: #004080; /* Deep blue button background */
+    border-color: #003366; /* Dark blue border for buttons */
+}
+
+/* Footer */
+#fh5co-footer {
+    background-color: #003366; /* Dark blue footer background */
+}
+#fh5co-footer a {
+    color: #ffffff; /* White text color for footer links */
+}
